@@ -11,9 +11,11 @@
 #include "opencv2/imgproc/imgproc.hpp"
 using namespace std;
 using namespace cv;
-#define IMG_PATH "/Users/numa/NUMA/Dossier Ecole/HEIG/Semestre 6/IMM/labos/labo2/IMM_Labo2/IMM_Labo1/MainCouleur.jpg"
+#define IMG_PATH "/Users/numa/NUMA/Dossier Ecole/HEIG/Semestre 6/IMM/labos/IMM/MainCouleur.jpg"
+//#define IMG_PATH "/Users/numa/NUMA/Dossier Ecole/HEIG/Semestre 6/IMM/labos/IMM/Im_RGB.jpg"
 #define TITRE_IMG "IMM_Labo3"
 #define TITRE_HIST "histogramme"
+#define TITRE_THRESH "Seuillage"
 
 
 int main (int argc, const char * argv[])
@@ -55,7 +57,7 @@ int main (int argc, const char * argv[])
     calcHist( &img_mat, 1, &zero, Mat(), hist, 1, &histSize, &histRange);
     
     //parametres de l'image representant l'histogramme
-    int hist_w = 600; int hist_h = 600;
+    int hist_w = 400; int hist_h = 400;
     int bin_w = cvRound( (double) hist_w/histSize );
     
     //initialisation des images representant les histogrammes
@@ -68,7 +70,6 @@ int main (int argc, const char * argv[])
     normalize(hist_red, hist_red, 0, hist_img.rows, NORM_MINMAX, -1, Mat() );
     normalize(hist_green, hist_green, 0, hist_img.rows, NORM_MINMAX, -1, Mat() );
     normalize(hist_blue, hist_blue, 0, hist_img.rows, NORM_MINMAX, -1, Mat() );
-    
     //dessin des histogrammes dans les images 
     for( int i = 1; i < histSize; i++ )
     {
@@ -101,30 +102,46 @@ int main (int argc, const char * argv[])
              Point( bin_w*(i), hist_h - cvRound(hist_blue.at<float>(i)) ),
              Scalar( 255, 0, 0), 2, 8, 0  );
     }
+    //calcul des seuils selon la methode d'Otsu
+    Mat red_tresh, blue_tresh, green_tresh;
+    int red_otsu = threshold(img_mat_red, red_tresh, 0, 255, THRESH_OTSU);
+    int green_otsu = threshold(img_mat_green, green_tresh, 0, 255, THRESH_OTSU);
+    int blue_otsu = threshold(img_mat_blue, blue_tresh, 0, 255, THRESH_OTSU);
+    
+    //ajout des seuils sur les histogrammes
+    line(hist_r, Point(red_otsu, 0), Point(red_otsu, hist_h), Scalar(255, 255, 255), 2, 8, 0);
+    line(hist_g, Point(green_otsu, 0), Point(green_otsu, hist_h), Scalar(255, 255, 255), 2, 8, 0);
+    line(hist_b, Point(blue_otsu, 0), Point(blue_otsu, hist_h), Scalar(255, 255, 255), 2, 8, 0);
     
     //initialisation des fenetres
     namedWindow(TITRE_IMG, CV_WINDOW_AUTOSIZE);
     namedWindow(TITRE_HIST, CV_WINDOW_AUTOSIZE);
+    namedWindow(TITRE_THRESH, CV_WINDOW_AUTOSIZE);
+    
     
     //affichage de l'image de base et son histogramme
     imshow(TITRE_IMG, img_mat);
     imshow(TITRE_HIST, hist_img);
     printf("pour afficher les composantes de chaque couleur (RGB), appuyer sur R pour rouge, B pour bleu, G pour vert, N pour l'image originale ou toute autre touche pour quitter ");
     //boucle d'interaction avec l'utilisateur
+    printf("1");
     while (true) {
         saisie = waitKey();
         switch (saisie) {
             case 'r':
                 imshow(TITRE_IMG, img_mat_red);
                 imshow(TITRE_HIST, hist_r);
+                imshow(TITRE_THRESH, red_tresh);
                 break;
             case 'g':
                 imshow(TITRE_IMG, img_mat_green);
                 imshow(TITRE_HIST, hist_g);
+                imshow(TITRE_THRESH, green_tresh);
                 break;
             case 'b':
                 imshow(TITRE_IMG, img_mat_blue);
                 imshow(TITRE_HIST, hist_b);
+                imshow(TITRE_THRESH, blue_tresh);
                 break;
             case 'n':
                 imshow(TITRE_IMG, img_mat);
