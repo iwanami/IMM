@@ -1,0 +1,232 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF52ECBA150638040068A1AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF52ECB9150638040068A1AC /* main.cpp */; };
+		BF52ECBC150638040068A1AC /* IMM_Labo3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF52ECBB150638040068A1AC /* IMM_Labo3.1 */; };
+		BF52ECC5150639A40068A1AC /* libopencv_core.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF52ECC2150639A40068A1AC /* libopencv_core.2.3.1.dylib */; };
+		BF52ECC6150639A40068A1AC /* libopencv_highgui.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF52ECC3150639A40068A1AC /* libopencv_highgui.2.3.1.dylib */; };
+		BF52ECC7150639A40068A1AC /* libopencv_imgproc.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF52ECC4150639A40068A1AC /* libopencv_imgproc.2.3.1.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF52ECB3150638040068A1AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				BF52ECBC150638040068A1AC /* IMM_Labo3.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BF52ECB5150638040068A1AC /* IMM_Labo3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IMM_Labo3; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF52ECB9150638040068A1AC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BF52ECBB150638040068A1AC /* IMM_Labo3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = IMM_Labo3.1; sourceTree = "<group>"; };
+		BF52ECC2150639A40068A1AC /* libopencv_core.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.3.1.dylib; path = ../../../../../../../../../../opt/local/lib/libopencv_core.2.3.1.dylib; sourceTree = "<group>"; };
+		BF52ECC3150639A40068A1AC /* libopencv_highgui.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.2.3.1.dylib; path = ../../../../../../../../../../opt/local/lib/libopencv_highgui.2.3.1.dylib; sourceTree = "<group>"; };
+		BF52ECC4150639A40068A1AC /* libopencv_imgproc.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.2.3.1.dylib; path = ../../../../../../../../../../opt/local/lib/libopencv_imgproc.2.3.1.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF52ECB2150638040068A1AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF52ECC5150639A40068A1AC /* libopencv_core.2.3.1.dylib in Frameworks */,
+				BF52ECC6150639A40068A1AC /* libopencv_highgui.2.3.1.dylib in Frameworks */,
+				BF52ECC7150639A40068A1AC /* libopencv_imgproc.2.3.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF52ECAA150638040068A1AC = {
+			isa = PBXGroup;
+			children = (
+				BF52ECC2150639A40068A1AC /* libopencv_core.2.3.1.dylib */,
+				BF52ECC3150639A40068A1AC /* libopencv_highgui.2.3.1.dylib */,
+				BF52ECC4150639A40068A1AC /* libopencv_imgproc.2.3.1.dylib */,
+				BF52ECB8150638040068A1AC /* IMM_Labo3 */,
+				BF52ECB6150638040068A1AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF52ECB6150638040068A1AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF52ECB5150638040068A1AC /* IMM_Labo3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF52ECB8150638040068A1AC /* IMM_Labo3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF52ECB9150638040068A1AC /* main.cpp */,
+				BF52ECBB150638040068A1AC /* IMM_Labo3.1 */,
+			);
+			path = IMM_Labo3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF52ECB4150638040068A1AC /* IMM_Labo3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF52ECBF150638040068A1AC /* Build configuration list for PBXNativeTarget "IMM_Labo3" */;
+			buildPhases = (
+				BF52ECB1150638040068A1AC /* Sources */,
+				BF52ECB2150638040068A1AC /* Frameworks */,
+				BF52ECB3150638040068A1AC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMM_Labo3;
+			productName = IMM_Labo3;
+			productReference = BF52ECB5150638040068A1AC /* IMM_Labo3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF52ECAC150638040068A1AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = BF52ECAF150638040068A1AC /* Build configuration list for PBXProject "IMM_Labo3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF52ECAA150638040068A1AC;
+			productRefGroup = BF52ECB6150638040068A1AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF52ECB4150638040068A1AC /* IMM_Labo3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF52ECB1150638040068A1AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF52ECBA150638040068A1AC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF52ECBD150638040068A1AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BF52ECBE150638040068A1AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF52ECC0150638040068A1AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /opt/local/include;
+			};
+			name = Debug;
+		};
+		BF52ECC1150638040068A1AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /opt/local/include;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF52ECAF150638040068A1AC /* Build configuration list for PBXProject "IMM_Labo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF52ECBD150638040068A1AC /* Debug */,
+				BF52ECBE150638040068A1AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF52ECBF150638040068A1AC /* Build configuration list for PBXNativeTarget "IMM_Labo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF52ECC0150638040068A1AC /* Debug */,
+				BF52ECC1150638040068A1AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF52ECAC150638040068A1AC /* Project object */;
+}
